@@ -1097,7 +1097,7 @@ PRODUCT_PACKAGES += \
     libmipc \
     libmmagent \
     libmnl \
-    libmpbase \
+    libmpbase_vendor \
     libmsnr \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \

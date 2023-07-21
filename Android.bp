@@ -16202,7 +16202,6 @@ cc_prebuilt_library_shared {
 	allow_undefined_symbols: false,
 	shared_libs: [
 		"libc++_shared",
-		"libmpbase",
 		"liblog",
 		"libc",
 		"libm",
@@ -16227,7 +16226,6 @@ cc_prebuilt_library_shared {
 	check_elf_files: true,
 	allow_undefined_symbols: false,
 	shared_libs: [
-		"libmpbase",
 		"libarcsoft_beautyshot",
 		"libmtkcam_imgbuf",
 		"libmtkcam_hwutils",
@@ -30001,3 +29999,22 @@ cc_prebuilt_library_shared {
     compile_multilib: "both",
     vendor_available: true
 }
+
+cc_prebuilt_library_shared {
+	name: "libmpbase_vendor",
+	stem: "libmpbase",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmpbase.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
